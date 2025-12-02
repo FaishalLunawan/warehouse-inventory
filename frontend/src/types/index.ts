@@ -16,14 +16,6 @@ export interface ApiResponse<T = any> {
   validationErrors?: Record<string, string>;
 }
 
-export interface InventoryStats {
-  totalItems: number;
-  totalValue: number;
-  categories: string[];
-  lowStockCount: number;
-  lowStockItems: InventoryItem[];
-}
-
 export interface SearchParams {
   search?: string;
   category?: string;

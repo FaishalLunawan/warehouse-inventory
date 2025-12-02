@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { ApiResponse, InventoryItem, SearchParams, InventoryStats } from '@/types';
+import { ApiResponse, InventoryItem, SearchParams } from '@/types';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -11,7 +11,6 @@ const api = axios.create({
   timeout: 10000,
 });
 
-// Request interceptor untuk logging
 api.interceptors.request.use(
   (config) => {
     console.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`);
@@ -23,7 +22,6 @@ api.interceptors.request.use(
   }
 );
 
-// Response interceptor untuk error handling
 api.interceptors.response.use(
   (response) => {
     console.log(`API Response: ${response.status} ${response.config.url}`);
@@ -95,18 +93,6 @@ export const inventoryApi = {
     if (!response.data.success) {
       throw new Error(response.data.error || 'Failed to delete item');
     }
-  },
-
-  // Get stats
-  async getStats(): Promise<InventoryStats> {
-    const response = await api.get<ApiResponse<InventoryStats>>('/items/stats');
-    if (!response.data.success) {
-      throw new Error(response.data.error || 'Failed to fetch stats');
-    }
-    if (!response.data.data) {
-      throw new Error('No data returned');
-    }
-    return response.data.data;
   },
 
   // Get categories

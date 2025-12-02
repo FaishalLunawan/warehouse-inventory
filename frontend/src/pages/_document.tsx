@@ -7,8 +7,8 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Warehouse Inventory Management System" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Warehouse Manager</title>
+        <link rel="icon" href="/warehouse.ico" />
+        <title>Warehouse</title>
       </Head>
       <body>
         <Main />

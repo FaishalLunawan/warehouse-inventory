@@ -15,7 +15,7 @@ export default function Header() {
           
           <div className="flex items-center space-x-4">
             <div className="text-right">
-              <p className="text-sm font-medium text-gray-900">Welcome, Admin</p>
+              <p className="text-sm font-medium text-gray-900">Welcome, Faishal Lunawan</p>
               <p className="text-xs text-gray-500">Warehouse Manager</p>
             </div>
             <div className="h-8 w-8 rounded-full bg-primary-100 flex items-center justify-center">

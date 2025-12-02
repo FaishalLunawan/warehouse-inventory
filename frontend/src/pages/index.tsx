@@ -140,7 +140,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Inventory Management</h1>
-            <p className="text-gray-600">Manage your warehouse items efficiently</p>
+            <p className="text-gray-600">Manage your warehouse</p>
           </div>
           <button
             onClick={() => {
