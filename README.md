@@ -33,5 +33,5 @@ router.put('/:id', InventoryController.updateItem);
 // DELETE /api/items/:id - Delete item
 router.delete('/:id', InventoryController.deleteItem);
 ```
-Why you chose your stack
+Why you chose your stack ???
 I chose **Node.js/Express + Next.js** with **TypeScript** across the stack for its perfect balance of speed and productivity. Node.js handles API requests efficiently, while Next.js provides optimized React features out of the box. **TypeScript** ensures type safety in both frontend and backend, catching errors early. **SQLite** keeps setup simple with zero configuration, and **Tailwind CSS** enables rapid, responsive UI development. This full-stack TypeScript approach creates a unified, maintainable codebase that's both developer-friendly and production-ready.
