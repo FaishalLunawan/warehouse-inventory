@@ -211,37 +211,6 @@ export class InventoryController {
     }
   }
 
-  // GET /api/items/stats - Get inventory statistics
-  static async getStats(req: Request, res: Response) {
-    try {
-      const [totalItems, totalValue, categories, lowStock] = await Promise.all([
-        InventoryRepository.findAll().then(items => items.length),
-        InventoryRepository.getTotalValue(),
-        InventoryRepository.getCategories(),
-        InventoryRepository.getLowStock()
-      ]);
-      
-      const response: ApiResponse = {
-        success: true,
-        data: {
-          totalItems,
-          totalValue: parseFloat(totalValue.toFixed(2)),
-          categories,
-          lowStockCount: lowStock.length,
-          lowStockItems: lowStock
-        }
-      };
-      
-      res.json(response);
-    } catch (error) {
-      console.error('Error fetching stats:', error);
-      res.status(500).json({
-        success: false,
-        error: 'Failed to fetch statistics'
-      });
-    }
-  }
-
   // GET /api/items/categories - Get all categories
   static async getCategories(req: Request, res: Response) {
     try {

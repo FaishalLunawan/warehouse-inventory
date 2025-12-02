@@ -38,7 +38,6 @@ app.get('/api-docs', (req, res) => {
       'POST /api/items': 'Create new item',
       'PUT /api/items/:id': 'Update item',
       'DELETE /api/items/:id': 'Delete item',
-      'GET /api/items/stats': 'Get inventory statistics',
       'GET /api/items/categories': 'Get all categories',
       'GET /health': 'Health check'
     },

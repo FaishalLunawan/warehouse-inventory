@@ -75,16 +75,11 @@ export const initDatabase = (): Promise<void> => {
 const seedDatabase = (db: sqlite3.Database): Promise<void> => {
   return new Promise((resolve, reject) => {
     const initialItems: Omit<InventoryItem, 'id'>[] = [
-      { name: 'MacBook Pro 16"', category: 'Electronics', price: 2499.99, stock: 8 },
-      { name: 'Ergonomic Office Chair', category: 'Furniture', price: 349.99, stock: 15 },
-      { name: 'Wireless Mouse', category: 'Electronics', price: 29.99, stock: 42 },
-      { name: 'Desk Lamp', category: 'Furniture', price: 24.99, stock: 23 },
-      { name: 'Sticky Notes', category: 'Stationery', price: 5.99, stock: 67 },
-      { name: 'Coffee Mug', category: 'Kitchen', price: 12.99, stock: 89 },
-      { name: 'External SSD 1TB', category: 'Electronics', price: 129.99, stock: 18 },
-      { name: 'Desk Organizer', category: 'Furniture', price: 19.99, stock: 31 },
-      { name: 'Ballpoint Pens (Pack of 12)', category: 'Stationery', price: 8.49, stock: 54 },
-      { name: 'Water Bottle', category: 'Kitchen', price: 18.99, stock: 27 }
+      { name: 'MacBook"', category: 'Electronics', price: 15000000, stock: 8 },
+      { name: 'Kursi lipat', category: 'Furniture', price: 100000, stock: 15 },
+      { name: 'Laptop', category: 'Electronics', price: 3000000, stock: 10 },
+      { name: 'Keyboard', category: 'Electronics', price: 2000, stock: 20 },
+      { name: 'Sendok', category: 'kitchen', price: 1000, stock: 25 },
     ];
 
     const stmt = db.prepare(

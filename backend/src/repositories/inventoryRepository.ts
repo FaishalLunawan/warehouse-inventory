@@ -127,9 +127,4 @@ export class InventoryRepository {
     return result[0]?.total || 0;
   }
 
-  // Get low stock items (stock < 10)
-  static async getLowStock(): Promise<InventoryItem[]> {
-    const query = 'SELECT * FROM inventory WHERE stock < 10 ORDER BY stock ASC';
-    return dbQuery<InventoryItem[]>(query);
-  }
 }
