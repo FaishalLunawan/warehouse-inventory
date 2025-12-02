@@ -141,18 +141,18 @@ export default function ItemForm({
 
           <div>
             <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-              Price ($) *
+              Price (Rp) *
             </label>
             <input
               type="number"
               id="price"
               name="price"
-              step="0.01"
+              step="100"
               min="0"
               value={formData.price}
               onChange={handleChange}
               className={`input ${errors.price ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-              placeholder="0.00"
+              placeholder="100"
             />
             {errors.price && (
               <p className="mt-1 text-sm text-red-600">{errors.price}</p>
